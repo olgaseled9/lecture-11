@@ -11,17 +11,18 @@ import org.slf4j.LoggerFactory;
 
 public class Runner {
 
-    private final static Logger logger = LoggerFactory.getLogger(Runner.class);
+    private static final Logger logger = LoggerFactory.getLogger(Runner.class);
 
     public static void main(String[] args) {
         CustomerDao customerDao = new CustomerDaoImpl();
-        customerDao.addCustomer(new Customer(24, "Ivan", "Ivanov"));
+        customerDao.addCustomer(new Customer(25, "Vasia", "Petrov"));
         OrderDao orderDao = new OrderDaoImpl();
-        orderDao.addOrder(new Order(24, 24, "2021-11-09"));
-        orderDao.deleteOrderById(24);
-        customerDao.deleteCustomerById(24);
+        orderDao.addOrder(new Order(25, 25, "2020-11-09"));
+        orderDao.deleteOrderById(25);
+        customerDao.deleteCustomerById(25);
         System.out.println(customerDao.getAll());
         System.out.println(orderDao.getAll());
+        System.out.println(customerDao.findCustomerByCustomerId(9));
 
     }
 }
