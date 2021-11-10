@@ -11,7 +11,7 @@ import org.slf4j.LoggerFactory;
 
 public class Runner {
 
-    private final static Logger logger = LoggerFactory.getLogger(Runner.class);
+    private static final Logger logger = LoggerFactory.getLogger(Runner.class);
 
     public static void main(String[] args) {
         CustomerDao customerDao = new CustomerDaoImpl();
