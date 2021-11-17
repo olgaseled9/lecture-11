@@ -10,7 +10,6 @@ import java.util.ResourceBundle;
 public class PoolConnectionToDataBase {
 
     private static final Logger logger = LoggerFactory.getLogger(PoolConnectionToDataBase.class);
-
     private static BasicDataSource basicDataSource;
 
     static {
@@ -27,7 +26,7 @@ public class PoolConnectionToDataBase {
             basicDataSource.setDriverClassName(driver);
             basicDataSource.setMinIdle(15);
             basicDataSource.setMaxIdle(25);
-            basicDataSource.setMaxOpenPreparedStatements(250);
+            basicDataSource.setMaxOpenPreparedStatements(25);
         } catch (Exception e) {
             logger.error("Connection is not available", e);
         }

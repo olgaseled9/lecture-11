@@ -11,15 +11,15 @@ import java.util.List;
 @AllArgsConstructor
 public class Order {
 
-    private Integer orderId;
-    private Integer customerId;
-    private String dateOrder;
+    private Long orderId;
+    private Long customerId;
+    private Integer quantity;
     private List<Customer> customers;
 
-    public Order(Integer orderId, Integer customerId, String dateOrder) {
+    public Order(Long orderId, Long customerId, Integer quantity) {
         this.orderId = orderId;
         this.customerId = customerId;
-        this.dateOrder = dateOrder;
+        this.quantity = quantity;
     }
 }
 

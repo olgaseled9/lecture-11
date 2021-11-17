@@ -6,12 +6,13 @@ import java.util.List;
 
 public interface CustomerDao {
 
-    Customer addCustomer(Customer customer);
+    Customer saveCustomer(Customer customer);
 
     List<Customer> getAll();
 
-    void deleteCustomerById(Integer customerId);
+    void deleteCustomerById(Long customerId);
 
-    Customer findCustomerByCustomerId(Integer customerId);
+    Customer findCustomerByCustomerId(Long customerId);
 }
+
 
